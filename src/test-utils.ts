@@ -10,7 +10,7 @@ export interface ExtendedRuleTesterOptions extends RuleTesterInitOptions, TestCa
   lang?: 'js' | 'ts'
 }
 
-export function run(options: ExtendedRuleTesterOptions) {
+export function run(options: ExtendedRuleTesterOptions): void {
   return _run({
     recursive: false,
     verifyAfterFix: false,
