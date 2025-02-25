@@ -43,7 +43,6 @@
     "@typescript-eslint/parser": "^8.24.1",
     "@typescript-eslint/utils": "^8.24.1",
     "@vida0905/eslint-config": "^2.1.2",
-    "bumpp": "^10.0.3",
     "es-toolkit": "^1.32.0",
     "eslint": "^9.21.0",
     "eslint-vitest-rule-tester": "^1.1.0",
