@@ -8,7 +8,7 @@ const recommendedRules: Linter.RulesRecord = Object.fromEntries(
 )
 
 export default {
-  rules,
+  rules: rules as ESLint.Plugin['rules'],
   configs: {
     'recommended': {
       plugins: {
@@ -18,10 +18,10 @@ export default {
         },
       },
       rules: recommendedRules,
-    },
+    } as Linter.Config,
     'recommended-legacy': {
       plugins: [pluginName],
       rules: recommendedRules,
-    },
+    } as Linter.LegacyConfig,
   },
-} as ESLint.Plugin
+}
