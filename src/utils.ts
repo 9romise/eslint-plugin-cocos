@@ -52,7 +52,7 @@ export function createRule<
       ...meta,
       docs: {
         ...meta.docs,
-        url: `https://github.com/9romise/eslint-plugin-cocos/blob/main/docs/${name}.md`,
+        url: `https://github.com/9romise/eslint-plugin-cocos/blob/main/src/rules/${name}/README.md`,
       },
     } as any,
   }
