@@ -23,5 +23,5 @@ export default defineConfig({
     ...rules,
   ],
   shims: true,
-  format: ['cjs', 'esm'],
+  format: 'esm',
 }) as UserConfig
