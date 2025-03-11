@@ -1,6 +1,5 @@
-import type { Tree } from '~/types'
 import type { ESLintRuleModule } from '~/utils'
-import { AST_NODE_TYPES } from '@typescript-eslint/utils'
+import { isCCClassDecorator } from '~/ast-utils'
 import { createRule } from '~/utils'
 
 export const RULE_NAME = 'ccclass-first'
@@ -23,15 +22,6 @@ export default createRule<Options, MessageIds>({
   },
   defaultOptions: [],
   create(context) {
-    function isCCClassDecorator(decorator: Tree.Decorator) {
-      const expression = decorator.expression
-      if (expression.type === AST_NODE_TYPES.Identifier)
-        return expression.name === 'ccclass'
-      else if (expression.type === AST_NODE_TYPES.CallExpression)
-        return expression.callee.type === AST_NODE_TYPES.Identifier && expression.callee.name === 'ccclass'
-      return false
-    }
-
     return {
       ClassDeclaration(node) {
         const { decorators } = node
