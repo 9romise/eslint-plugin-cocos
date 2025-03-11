@@ -1,4 +1,4 @@
-import type { Config } from 'tsdown'
+import type { UserConfig } from 'tsdown'
 import { resolve } from 'node:path'
 import { defineConfig } from 'tsdown'
 
@@ -13,4 +13,4 @@ export default defineConfig({
   ],
   shims: true,
   format: ['cjs', 'esm'],
-}) as Config
+}) as UserConfig
