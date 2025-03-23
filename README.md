@@ -4,6 +4,7 @@
 [![npm bundle size][npm-bundle-size-src]][npm-bundle-size-href]
 [![License][license-src]][license-href]
 
+🚧 WIP:
 An ESLint plugin for Cocos Creator (>=3.8.5, maybe lower).
 
 ## Installation
