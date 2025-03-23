@@ -51,6 +51,7 @@
     "nano-staged": "^0.8.0",
     "oxc-transform": "^0.61.1",
     "simple-git-hooks": "^2.12.1",
+    "tinyglobby": "^0.2.12",
     "tsdown": "^0.6.9",
     "typescript": "^5.8.2",
     "vitest": "^3.0.9"

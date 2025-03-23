@@ -39,6 +39,9 @@ importers:
       simple-git-hooks:
         specifier: ^2.12.1
         version: 2.12.1
+      tinyglobby:
+        specifier: ^0.2.12
+        version: 0.2.12
       tsdown:
         specifier: ^0.6.9
         version: 0.6.9(typescript@5.8.2)

@@ -1,15 +1,10 @@
 import type { UserConfig } from 'tsdown'
-import { readdirSync, statSync } from 'node:fs'
-import { resolve } from 'node:path'
+import { basename, dirname, resolve } from 'node:path'
+import { globSync } from 'tinyglobby'
 import { defineConfig } from 'tsdown'
 
-const RULE_SRC = 'src/rules'
-const rules = readdirSync(RULE_SRC, {
-  withFileTypes: false,
-  recursive: false,
-}).flatMap((dir) => {
-  const name = `${RULE_SRC}/${dir}`
-  return statSync(name).isDirectory() ? [`${name}/${dir}.ts`] : []
+const rulesEntry = globSync(`src/rules/**/*.ts`, {
+  ignore: ['**/*.test.ts', 'src/rules/index.ts'],
 })
 
 export default defineConfig({
@@ -18,10 +13,18 @@ export default defineConfig({
   alias: {
     '~': resolve('src'),
   },
-  entry: [
-    'src/index.ts',
-    ...rules,
-  ],
+  entry: {
+    index: 'src/index.ts',
+    ...Object.fromEntries(rulesEntry.map((file) => [`rules/${basename(dirname(file))}`, file])),
+  },
+  outputOptions: {
+    chunkFileNames(info) {
+      if (info.moduleIds.length === 1 && info.moduleIds[0].includes('rules')) {
+        return 'rules/[name].js'
+      }
+      return '[name].js'
+    },
+  },
   shims: true,
   format: 'esm',
 }) as UserConfig
