@@ -1,7 +1,8 @@
+import type { MessageIds, Options } from './ccclass-first'
 import { run } from '~/test-utils'
 import ccclassFirst from './ccclass-first'
 
-run({
+run<Options, MessageIds>({
   name: 'ccclass-first',
   rule: ccclassFirst,
   valid: [

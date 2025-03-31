@@ -1,12 +1,13 @@
-import type { Options } from './lifecycle-order'
+import type { MessageIds, Options } from './lifecycle-order'
+import type { TestCaseError } from '~/test-utils'
 import { run } from '~/test-utils'
 import rule from './lifecycle-order'
 
-function errors(n: string[]) {
+function errors(n: string[]): TestCaseError<MessageIds>[] {
   return n.map((name) => ({ messageId: 'invalidOrder', data: { name } }))
 }
 
-run<Options>({
+run<Options, MessageIds>({
   name: 'lifecycle-order',
   rule,
   valid: [
