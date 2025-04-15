@@ -2,6 +2,9 @@ import type { ASTNode, Tree } from './types'
 import { AST_NODE_TYPES } from '@typescript-eslint/utils'
 
 export function isCCClassDecorator(decorator: Tree.Decorator): decorator is Tree.Decorator {
+  if (decorator.parent.type !== AST_NODE_TYPES.ClassDeclaration)
+    return false
+
   const expression = decorator.expression
   if (expression.type === AST_NODE_TYPES.Identifier)
     return expression.name === 'ccclass'
