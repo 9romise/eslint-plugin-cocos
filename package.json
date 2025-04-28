@@ -2,7 +2,7 @@
   "name": "eslint-plugin-cocos",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@10.4.1",
+  "packageManager": "pnpm@10.9.0",
   "author": "Vida Xie<https://github.com/9romise>",
   "license": "MIT",
   "homepage": "https://github.com/9romise/eslint-plugin-cocos#readme",
@@ -39,22 +39,22 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "@typescript-eslint/utils": "^8.27.0"
+    "@typescript-eslint/utils": "^8.31.0"
   },
   "devDependencies": {
-    "@types/node": "^22.13.11",
-    "@typescript-eslint/parser": "^8.27.0",
+    "@types/node": "^22.15.2",
+    "@typescript-eslint/parser": "^8.31.0",
     "@vida0905/eslint-config": "^2.1.2",
-    "es-toolkit": "^1.33.0",
-    "eslint": "^9.23.0",
+    "es-toolkit": "^1.36.0",
+    "eslint": "^9.25.1",
     "eslint-vitest-rule-tester": "^2.2.0",
     "nano-staged": "^0.8.0",
-    "oxc-transform": "^0.61.1",
-    "simple-git-hooks": "^2.12.1",
-    "tinyglobby": "^0.2.12",
-    "tsdown": "^0.6.9",
-    "typescript": "^5.8.2",
-    "vitest": "^3.0.9"
+    "oxc-transform": "^0.67.0",
+    "simple-git-hooks": "^2.13.0",
+    "tinyglobby": "^0.2.13",
+    "tsdown": "^0.9.9",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.2"
   },
   "simple-git-hooks": {
     "pre-commit": "npx nano-staged"
