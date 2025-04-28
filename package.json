@@ -3,6 +3,7 @@
   "type": "module",
   "version": "1.1.0",
   "packageManager": "pnpm@10.9.0",
+  "description": "A set of ESLint rules for Cocos Creator.",
   "author": "Vida Xie<https://github.com/9romise>",
   "license": "MIT",
   "homepage": "https://github.com/9romise/eslint-plugin-cocos#readme",
@@ -13,7 +14,7 @@
   "bugs": {
     "url": "https://github.com/9romise/eslint-plugin-cocos/issues"
   },
-  "keywords": [],
+  "keywords": ["cocos", "Cocos Creator", "eslint", "eslint-plugin"],
   "sideEffects": false,
   "exports": {
     ".": {
@@ -34,7 +35,6 @@
     "test": "vitest --typecheck",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "release": "bumpp",
     "prepublishOnly": "pnpm run build",
     "prepare": "simple-git-hooks"
   },
