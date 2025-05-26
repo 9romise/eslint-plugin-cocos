@@ -2,7 +2,7 @@
   "name": "eslint-plugin-cocos",
   "type": "module",
   "version": "1.1.0",
-  "packageManager": "pnpm@10.9.0",
+  "packageManager": "pnpm@10.11.0",
   "description": "A set of ESLint rules for Cocos Creator.",
   "author": "Vida Xie<https://github.com/9romise>",
   "license": "MIT",
@@ -14,7 +14,12 @@
   "bugs": {
     "url": "https://github.com/9romise/eslint-plugin-cocos/issues"
   },
-  "keywords": ["cocos", "Cocos Creator", "eslint", "eslint-plugin"],
+  "keywords": [
+    "cocos",
+    "Cocos Creator",
+    "eslint",
+    "eslint-plugin"
+  ],
   "sideEffects": false,
   "exports": {
     ".": {
@@ -39,21 +44,21 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "@typescript-eslint/utils": "^8.31.0"
+    "@typescript-eslint/utils": "catalog:lint"
   },
   "devDependencies": {
-    "@types/node": "^22.15.2",
-    "@typescript-eslint/parser": "^8.31.0",
-    "@vida0905/eslint-config": "^2.1.2",
-    "es-toolkit": "^1.36.0",
-    "eslint": "^9.25.1",
-    "eslint-vitest-rule-tester": "^2.2.0",
-    "nano-staged": "^0.8.0",
-    "simple-git-hooks": "^2.13.0",
-    "tinyglobby": "^0.2.13",
-    "tsdown": "^0.9.9",
-    "typescript": "^5.8.3",
-    "vitest": "^3.1.2"
+    "@types/node": "catalog:types",
+    "@typescript-eslint/parser": "catalog:lint",
+    "@vida0905/eslint-config": "catalog:lint",
+    "es-toolkit": "catalog:dev",
+    "eslint": "catalog:lint",
+    "eslint-vitest-rule-tester": "catalog:test",
+    "nano-staged": "catalog:dev",
+    "simple-git-hooks": "catalog:lint",
+    "tinyglobby": "catalog:node",
+    "tsdown": "catalog:build",
+    "typescript": "catalog:dev",
+    "vitest": "catalog:test"
   },
   "simple-git-hooks": {
     "pre-commit": "npx nano-staged"
