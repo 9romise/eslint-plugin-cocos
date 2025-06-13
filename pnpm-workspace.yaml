@@ -1,20 +1,20 @@
 catalogs:
   build:
-    tsdown: ^0.12.3
+    tsdown: ^0.12.7
   dev:
-    es-toolkit: ^1.38.0
+    es-toolkit: ^1.39.3
     nano-staged: ^0.8.0
     typescript: ^5.8.3
   lint:
-    '@typescript-eslint/parser': ^8.32.1
-    '@typescript-eslint/utils': ^8.32.1
-    '@vida0905/eslint-config': ^2.1.2
-    eslint: ^9.27.0
+    '@typescript-eslint/parser': ^8.34.0
+    '@typescript-eslint/utils': ^8.34.0
+    '@vida0905/eslint-config': ^2.3.0
+    eslint: ^9.28.0
     simple-git-hooks: ^2.13.0
   node:
     tinyglobby: ^0.2.14
   test:
     eslint-vitest-rule-tester: ^2.2.0
-    vitest: ^3.1.4
+    vitest: ^3.2.3
   types:
-    '@types/node': ^22.15.21
+    '@types/node': ^24.0.1
