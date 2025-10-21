@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1](https://github.com/9romise/eslint-plugin-cocos/compare/v1.1.0...v1.1.1) (2025-10-21)
+
+
+### Build Related
+
+* **deps:** bump vite from 6.3.5 to 7.1.11 ([#7](https://github.com/9romise/eslint-plugin-cocos/issues/7)) ([d12fe16](https://github.com/9romise/eslint-plugin-cocos/commit/d12fe164d788ce256328e60aa36f25d6db6c4118))
+* **deps:** bump vite from 6.3.5 to 7.1.5 ([#6](https://github.com/9romise/eslint-plugin-cocos/issues/6)) ([206c934](https://github.com/9romise/eslint-plugin-cocos/commit/206c9341ca857e8b15b47cccd6f05868265fa381))
+
 ## [1.1.0](https://github.com/9romise/eslint-plugin-cocos/compare/v1.0.0...v1.1.0) (2025-04-28)
 
 
